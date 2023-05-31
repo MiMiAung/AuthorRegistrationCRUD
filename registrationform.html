@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./registratiionfomstyle.css" />
+
+    <title>Document</title>
+  </head>
+  <style></style>
+  <body>
+    <header>
+      <nav class="hero-nav">
+        <ul class="flex-list-style">
+          <li><a href="">Author Home</a></li>
+          <span class="flex-list-style" id="id-span-li">
+            <li>
+              <a
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                class="aclick"
+                id="btnModel"
+                >JOIN</a
+              >
+            </li>
+
+            <li><a href="#" id="id-sign-in"></a></li>
+          </span>
+        </ul>
+      </nav>
+      <!-- id="section-author" id="section-book-info" -->
+    </header>
+
+    <div id="plzJoin">Please, click JOIN button</div>
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal Author -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+      name="authorModel"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Author Information
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <section class="section-author-info">
+              <form action="" method="post" name="author-form">
+                <div class="author-info">
+                  <div class="author-info-container">
+                    <div>
+                      <div style="border: 1px solid black">
+                        <img id="output-author" width="200" />
+                        <input
+                          type="file"
+                          accept="image/*"
+                          name="image"
+                          onchange="loadFileAuthor(event)"
+                        />
+                      </div>
+
+                      <label for="name" class="block-label">Your Name</label>
+                      <input type="text" name="name" class="name" />
+                    </div>
+
+                    <div class="contact-info">
+                      <div>
+                        <label for="phno" class="block-label">Phone No:</label>
+                        <input type="text" name="phno" />
+                      </div>
+                      <div>
+                        <label for="email" class="block-label"
+                          >Email Address</label
+                        >
+                        <input type="email" name="email" />
+                      </div>
+
+                      <div>
+                        <label for="country" class="block-label">Country</label>
+                        <input type="text" name="country" />
+                      </div>
+
+                      <div>
+                        <label for="postcode" class="block-label"
+                          >Post Code</label
+                        >
+                        <input type="text" name="postcode" />
+                      </div>
+
+                      <div>
+                        <label for="city" class="block-label">City</label>
+                        <input type="text" name="city" />
+                      </div>
+                      <div>
+                        <label for="fulladdr" class="block-label"
+                          >full Address</label
+                        >
+                        <textarea name="" id="div-fulladdr"></textarea>
+                      </div>
+
+                      <div class="about-your">
+                        <label for="about-your" class="block-label"
+                          >About Your</label
+                        >
+                        <textarea name="about-your" id="about"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              id="saveauthor"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              SAVE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal-Book -->
+    <div
+      class="modal fade"
+      id="staticBackdrop-book"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Book Information
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <section id="section-book-info">
+              <form action="" method="post" name="book-form">
+                <div class="book-info">
+                  <div>
+                    <div style="border: 1px solid black">
+                      <img id="output-book" width="200" />
+                      <input
+                        type="file"
+                        accept="image/*"
+                        name="image"
+                        onchange="loadFileBook(event)"
+                      />
+                    </div>
+
+                    <label for="name" class="block-label">Book Name</label>
+                    <input type="text" name="name" class="name" />
+                    <input style="display: none" type="text" name="tb_index" />
+                  </div>
+
+                  <div class="div-bookdetail">
+                    <div class="lagyear-flex">
+                      <div class="lag-item">
+                        <label for="language" class="block-label"
+                          >Language</label
+                        >
+                        <select name="language" id="" class="name">
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                        </select>
+                      </div>
+                      <!-- <div class="year-item">
+                        <label for="year" class="block-label">Year</label>
+                        <input type="text" name="year" />
+                      </div> -->
+
+                      <div class="lag-item">
+                        <label for="category" class="block-label"
+                          >Category</label
+                        >
+                        <select name="category" id="" class="name">
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                          <option value=""></option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="lagyear-flex">
+                      <div class="year-item">
+                        <label for="pages" class="block-label">Pages</label>
+                        <input type="text" name="pages" />
+                      </div>
+                      <div class="year-item">
+                        <label for="year" class="block-label"
+                          >Date Published</label
+                        >
+                        <input type="text" name="year" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label for="bookdetail" class="block-label"
+                        >Book Detail</label
+                      >
+                      <textarea name="bookdetail" id="book-detail"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              id="savebook"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              SAVE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- author image preview -->
+    <div style="width: 50px; height: 50px" id="authorImgContainer">
+      <img id="author-preview" src="" alt="" class="circular_image" />
+    </div>
+
+    <div id="showdata"></div>
+
+    <div id="div-table-container">
+      <table id="id-table">
+        <tr>
+          <th>CoverImage</th>
+          <th>Name</th>
+          <th>Publish Year</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </table>
+    </div>
+    <!-- <p>
+      <input
+        type="file"
+        accept="image/*"
+        name="image"
+        id="file"
+        onchange="loadFile(event)"
+        style="display: none"
+      />
+    </p>
+    <p><label for="file" style="cursor: pointer">Upload Image</label></p>
+    <p><img id="output" width="200" /></p> -->
+
+    <script src="./registrationfom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

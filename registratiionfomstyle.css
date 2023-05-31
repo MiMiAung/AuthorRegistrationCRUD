@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* nav */
+.hero-nav{
+    border: 1px solid black;
+    height: 80px;
+    font-size: 22px;
+    
+   
+   
+}
+
+.flex-list-style{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+    padding-left: 50px;
+    
+}
+
+.hero-nav a {
+    text-decoration: none;
+    
+    
+}
+
+.form-container{
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+h3{
+    text-align: center;
+    margin: 20px 0;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+}
+
+select{
+    height: 30px;
+    
+}
+
+.block-label{
+    display: block;
+    
+}
+
+.author-info-container{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 20px;
+}
+
+.contact-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 15px;
+    padding-left: 50px;
+}
+
+.about-your{
+   
+   grid-column: 1/3;
+}
+
+#about{
+    width: 100%;
+    height: 50px;
+}
+
+#div-fulladdr{
+    width: 100%;
+}
+
+.img-box{
+    width: 80%;
+    height: 150px;
+    border: 1px solid black;
+    margin-bottom: 45px;
+}
+.name{
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+.book-info{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 20px;
+   
+
+}
+
+#book-detail{
+    width: 100%;
+    height: 150px;
+}
+ 
+.div-bookdetail{
+    padding-left: 50px;
+}
+
+button{
+    margin-top: 15px;
+   
+    display: block;
+    width: 20%;
+    height: 50px;
+    margin-left: 270px;
+    
+}
+
+.lagyear-flex{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.lag-item{
+    flex: 1;
+}
+
+.year-item{
+    flex: 1;
+}
+
+.div-marging{
+    margin: 40px 0;
+}
+
+/* section book info form */
+/* .section-book-info{
+    display: none;
+} */
+
+/* modal */
+.modal-dialog{
+    max-width : 900px !important
+}
+
+/* button{
+    all : initial;
+} */
+
+.circular_image {
+    border-radius: 50%;
+    overflow: hidden;
+
+    width: 100%;
+  }
+  .hero-nav {
+    border: 1px solid black;
+    height: 80px;
+    font-size: 22px;
+  }
+
+  .flex-list-style {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    height: 100%;
+    padding-right: 30px;
+  }
+
+  .hero-nav a {
+    text-decoration: none;
+  }
+
+  #aclick {
+    color: skyblue;
+  }
+
+  #div-table-container {
+    display: none;
+  }
