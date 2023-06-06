@@ -82,7 +82,7 @@ var loadFileAuthor = function (event) {
   function showAuthorInfo(){
     console.log(plzJoin)
     plzJoin.style.display = 'none';
-    showdata.textContent = 'Hello ' + authorObj.name + ' , if you want to create your book , please click the add-book button.'
+    showdata.textContent = 'Hello ' + authorObj.name + ' , you can upload your book by clicking ADD-Book button.'
 
       btnModel.replaceWith(authorImgContainer);
       liEle.appendChild(aEle);
@@ -90,6 +90,7 @@ var loadFileAuthor = function (event) {
       idspanli.prepend(liEle);
      
       authorPreview.setAttribute("src", authorObj.image);
+      authorPreview.style.height = '100%'
       console.log("obj" , authorObj);
   }
 
@@ -149,8 +150,11 @@ if(obj.tb_index === ''){
   let div = document.createElement('div');
   div.style.width = '50px';
   div.style.height = '50px';
+  div.style.margin = '0 auto';
   let img = document.createElement('img');
-  img.style.width = "100%"
+  img.style.width = "100%";
+  img.style.height = '100%';
+  img.style.padding = '5px'
   div.append(img);
   
   console.log('img ==> ', img)
@@ -165,6 +169,7 @@ if(obj.tb_index === ''){
   tableContainer.style.display = 'block';
 
   let tr = document.createElement('tr');
+ 
   let tdCell = document.createElement('td');
   img.setAttribute('src',obj.image);
   //bookPreview.style.borderRadius = '0'
@@ -217,9 +222,7 @@ if(obj.tb_index === ''){
     
    })
 
-  let tdDelete = document.createElement('td');
-  tdDelete.textContent = 'X';
-  tr.append(tdDelete);
+  
   
   idTable.append(tr);
 
